@@ -36,7 +36,13 @@ function createTable(objectArray, fields, fieldTitles) {
     {Date: '1/1/2010', City: 'el cajon', State: 'ca', Country: 'us', Shape: 'triangle', Minutes: '12 min', Comments: '3 Red objects hovering over El Cajon CA.'},
     {Date: '1/1/2010', City: 'fresno', State: 'ca', Country: 'us', Shape: 'light', Minutes: '1 min', Comments: 'Fresno cal. bright light hovers over head then vanished'},
     {Date: '1/1/2010', City: 'grant pass', State: 'or', Country: 'us', Shape: 'triangle', Minutes: 'A few min', Comments: 'Triangle shaped craft with three red lights at points hovering over Grants Pass&#44 Oregon.'},
-    {Date: '1/1/2010', City: 'la mesa', State: 'ca', Country: 'us', Shape: 'light', Minutes: '10 min', Comments: 'Three red lights over southern California that made a triangle shape'},],
+    {Date: '1/1/2010', City: 'la mesa', State: 'ca', Country: 'us', Shape: 'light', Minutes: '10 min', Comments: 'Three red lights over southern California that made a triangle shape'},
+    {Date: '1/1/2010', City: 'lemon grove', State: 'ca', Country: 'us', Shape: 'light', Minutes: 'about 15 min', Comments: '3 Red lights in line pattern above El Cajon/ East County.'},
+    {Date: '1/1/2010', City: 'maricopa', State: 'az', Country: 'us', Shape: 'unknown', Minutes: '3 min', Comments: 'One huge UFO or 3 seprate ones'},
+    {Date: '1/1/2010', City: 'park city', State: 'ky', Country: 'us', Shape: 'light', Minutes: '2-3 seconds', Comments: 'lights orbiting the moon'},
+    {Date: '1/1/2010', City: 'st. louis', State: 'mo', Country: 'us', Shape: 'fireball', Minutes: '1 min', Comments: '7 floating orbs or fireballs moving from southwest to northeast direction.'},
+    {Date: '1/1/2010', City: 'el cajon', State: 'ca', Country: 'us', Shape: 'formation', Minutes: '15 min', Comments: '3 Red lights over san diego area - IT&#39S A HOAX YET AGAIN&#33&#33'},
+    {Date: '1/1/2010', City: 'spring valley', State: 'ca', Country: 'us', Shape: 'light', Minutes: '10:00', Comments: 'Three bright red lights in a straight line formation'},],
   ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments'],  ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments'], ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments'], ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments'],  ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments'],  ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments'],  ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments']);
   
 // YOUR CODE HERE!
