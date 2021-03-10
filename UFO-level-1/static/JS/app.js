@@ -81,6 +81,9 @@ data.forEach(function(weatherReport) {
   var cell = row.append("td");
  });
 });
+ d3.select("tbody").html("");
+d3.select("div.parent").html("");
+d3.select("g.parent").selectAll("*").remove();
 
 // // Step 5: Use d3 to update each cell's text with
 // // weather report values (weekday, date, high, low)
@@ -95,4 +98,3 @@ data.forEach(function(weatherReport) {
    cell.text(value);
   });
  });
-
