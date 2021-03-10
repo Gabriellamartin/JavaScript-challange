@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="static/css/style.css">
+
 </head>
 
 <body>
@@ -24,7 +25,7 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.html">UFO Sightings
-            <img class="nav-ufo" src="static/images/ufo.svg">
+            <img class="nav-ufo" src="/Users/gabriellamartin/Desktop/Java Script HW/static/images/ufo.svg">
           </a>
         </div>
       </div>
@@ -57,6 +58,8 @@
         </div>
         <div class="col-md-10">
           <div id="table-area" class="">
+            <input type="text" id="personName" autofocus>
+            <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
             <table id="ufo-table" class="table table-striped">
               <thead>
                 <tr>
@@ -69,27 +72,10 @@
                   <th class="table-head">Comments</th>
                 </tr>
               </thead>
-              
+    
 <!-- used https://www.valentinog.com/blog/html-table/ to get help me create table rows -->
+
               <tbody>
-                <tr>
-                    <td>1/1/2010</td>
-                    <td>benton</td>
-                    <td>ar</td>
-                    <td>us</td>
-                    <td>circle</td>
-                    <td>5 mins.</td>
-                    <td>4 bright green circles high in the sky going in circles then one bright green light at my front door.</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
                 </tbody>
             </table>
           </div>
@@ -101,8 +87,7 @@
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-  <script src="static/js/data.js"></script>
-  <script src="static/js/app.js"></script>
-</body>
+  <script src="/Users/gabriellamartin/Desktop/Java Script HW/static/js/data.js"></script>
+  <script src="/Users/gabriellamartin/Desktop/Java Script HW/static/js/app.js"></script></body>
 
 </html>
