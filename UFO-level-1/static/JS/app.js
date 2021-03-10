@@ -1,48 +1,98 @@
 // from data.js
-// basic js table code from vanuan on Stackoverflow https://stackoverflow.com/questions/14643617/create-table-using-javascript
-function createTable(objectArray, fields, fieldTitles) {
-    let body = document.getElementsByTagName('body')[0];
-    let tbl = document.createElement('table');
-    let thead = document.createElement('thead');
-    let thr = document.createElement('tr');
-    fieldTitles.forEach((fieldTitle) => {
-      let th = document.createElement('th');
-      th.appendChild(document.createTextNode(fieldTitle));
-      thr.appendChild(th);
-    });
-    thead.appendChild(thr);
-    tbl.appendChild(thead);
-  
-    let tbdy = document.createElement('tbody');
-    let tr = document.createElement('tr');
-    objectArray.forEach((object) => {
-      let tr = document.createElement('tr');
-      fields.forEach((field) => {
-        var td = document.createElement('td');
-        td.appendChild(document.createTextNode(object[field]));
-        tr.appendChild(td);
-      });
-      tbdy.appendChild(tr);    
-    });
-    tbl.appendChild(tbdy);
-    body.appendChild(tbl)
-    return tbl;
-  }
-  
-  createTable([
-    {Date: '1/1/2010', City: 'benton', State: 'ar', Country: 'us', Shape: 'circle', Minutes: '5 min', Comments: '4 bright green circles high in the sky going in circles then one bright green light at my front door.'},
-    {Date: '1/1/2010', City: 'bonita', State: 'ca', Country: 'us', Shape: 'light', Minutes: '13 min', Comments: 'Three bright red lights witnessed floating stationary over San Diego New Years Day 2010'},
-    {Date: '1/1/2010', City: 'el cajon', State: 'ca', Country: 'us', Shape: 'triangle', Minutes: '6 min', Comments: 'On New Years Eve I went outside to hear the celebration and fireworks in my neighbor hood. And noticed 3 red lights above my house and'},
-    {Date: '1/1/2010', City: 'el cajon', State: 'ca', Country: 'us', Shape: 'triangle', Minutes: '12 min', Comments: '3 Red objects hovering over El Cajon CA.'},
-    {Date: '1/1/2010', City: 'fresno', State: 'ca', Country: 'us', Shape: 'light', Minutes: '1 min', Comments: 'Fresno cal. bright light hovers over head then vanished'},
-    {Date: '1/1/2010', City: 'grant pass', State: 'or', Country: 'us', Shape: 'triangle', Minutes: 'A few min', Comments: 'Triangle shaped craft with three red lights at points hovering over Grants Pass&#44 Oregon.'},
-    {Date: '1/1/2010', City: 'la mesa', State: 'ca', Country: 'us', Shape: 'light', Minutes: '10 min', Comments: 'Three red lights over southern California that made a triangle shape'},
-    {Date: '1/1/2010', City: 'lemon grove', State: 'ca', Country: 'us', Shape: 'light', Minutes: 'about 15 min', Comments: '3 Red lights in line pattern above El Cajon/ East County.'},
-    {Date: '1/1/2010', City: 'maricopa', State: 'az', Country: 'us', Shape: 'unknown', Minutes: '3 min', Comments: 'One huge UFO or 3 seprate ones'},
-    {Date: '1/1/2010', City: 'park city', State: 'ky', Country: 'us', Shape: 'light', Minutes: '2-3 seconds', Comments: 'lights orbiting the moon'},
-    {Date: '1/1/2010', City: 'st. louis', State: 'mo', Country: 'us', Shape: 'fireball', Minutes: '1 min', Comments: '7 floating orbs or fireballs moving from southwest to northeast direction.'},
-    {Date: '1/1/2010', City: 'el cajon', State: 'ca', Country: 'us', Shape: 'formation', Minutes: '15 min', Comments: '3 Red lights over san diego area - IT&#39S A HOAX YET AGAIN&#33&#33'},
-    {Date: '1/1/2010', City: 'spring valley', State: 'ca', Country: 'us', Shape: 'light', Minutes: '10:00', Comments: 'Three bright red lights in a straight line formation'},],
-  ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments'],  ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments'], ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments'], ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments'],  ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments'],  ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments'],  ['Date', 'City', 'State', 'Country', 'Shape', 'Minutes', 'Comments']);
-  
+var tableData = data.js;
+
 // YOUR CODE HERE!
+// Getting a reference to the button on the page with the id property set to `click-me`
+var button = d3.select("#click-me");
+
+// Getting a reference to the input element on the page with the id property set to 'input-field'
+var inputField = d3.select("#input-field");
+
+// This function is triggered when the button is clicked
+function handleClick() {
+  console.log("A button was clicked!");
+
+  // We can use d3 to see the object that dispatched the event
+  console.log(d3.event.target);
+}
+
+// We can use the `on` function in d3 to attach an event to the handler function
+button.on("click", handleClick);
+
+// You can also define the click handler inline
+button.on("click", function() {
+  console.log("Hi, a button was clicked!");
+  console.log(d3.event.target);
+});
+
+// Event handlers are just normal functions that can do anything you want
+button.on("click", function() {
+  d3.select(".giphy-me").html("<img src='https://gph.to/2Krfn0w' alt='giphy'>");
+});
+
+// Input fields can trigger a change event when new text is entered.
+inputField.on("change", function() {
+  var newText = d3.event.target.value;
+  console.log(newText);
+});
+
+console.log(data)
+
+// This activity was designed to run multiple times. For each time uncomment once step, run the JavaScript code,
+// comment the step again and move to the next step. 
+
+// Get a reference to the table body
+var tbody = d3.select("tbody");
+
+// Console.log the weather data from data.js
+console.log(data);
+
+// // Step 1: Loop Through `data` and console.log each weather report object
+ data.forEach(function(weatherReport) {
+  console.log(weatherReport);
+ });
+
+// // Step 2:  Use d3 to append one table row `tr` for each weather report object
+// // Don't worry about adding cells or text yet, just try appending the `tr` elements.
+ data.forEach(function(weatherReport) {
+   console.log(weatherReport);
+   var row = tbody.append("tr");
+ });
+
+// Step 3:  Use `Object.entries` to console.log each weather report value
+ data.forEach(function(weatherReport) {
+   console.log(weatherReport);
+  var row = tbody.append("tr");
+
+  Object.entries(weatherReport).forEach(function([key, value]) {
+   console.log(key, value);
+ });
+});
+
+// // Step 4: Use d3 to append 1 cell per weather report value (weekday, date, high, low)
+data.forEach(function(weatherReport) {
+ console.log(weatherReport);
+ var row = tbody.append("tr");
+
+ Object.entries(weatherReport).forEach(function([key, value]) {
+  console.log(key, value);
+  // Append a cell to the row for each value
+  // in the weather report object
+  var cell = row.append("td");
+ });
+});
+
+// // Step 5: Use d3 to update each cell's text with
+// // weather report values (weekday, date, high, low)
+ data.forEach(function(weatherReport) {
+  console.log(weatherReport);
+  var row = tbody.append("tr");
+   Object.entries(weatherReport).forEach(function([key, value]) {
+   console.log(key, value);
+//     // Append a cell to the row for each value
+//     // in the weather report object
+   var cell = row.append("td");
+   cell.text(value);
+  });
+ });
+
